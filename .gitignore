@@ -5,6 +5,11 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 test/unit/coverage
+<<<<<<< HEAD
+=======
+test/e2e/reports
+selenium-debug.log
+>>>>>>> f2e0191d8a3a7f39105f53d3126b70835b0f8add
 
 # Editor directories and files
 .idea

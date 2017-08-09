@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # vue-base
+=======
+# top-storyfetch-vue
+>>>>>>> f2e0191d8a3a7f39105f53d3126b70835b0f8add
 
 > A Vue.js project
 
@@ -20,6 +24,12 @@ npm run build --report
 # run unit tests
 npm run unit
 
+<<<<<<< HEAD
+=======
+# run e2e tests
+npm run e2e
+
+>>>>>>> f2e0191d8a3a7f39105f53d3126b70835b0f8add
 # run all tests
 npm test
 ```
