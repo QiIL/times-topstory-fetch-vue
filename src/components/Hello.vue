@@ -1,7 +1,20 @@
 <template>
-  <div class="hello">
-    <div @click="$router.push('/hello2')">Test</div>
-  </div>
+  <div>this is hello</div>
+  <!-- <section>
+    <div>
+      <div>
+        <div>
+          <div>
+            {{ post.title }}
+          </div>
+          <a href="post.url" target="_blank"><img src="post.image_url" alt=""></a>
+          <div>
+            <p>{{ post.abstract }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
 </template>
 
 <script>
