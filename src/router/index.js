@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
+import NewsList from '@/components/NewsList'
 import Index from '@/views/index'
 import Title from '@/components/Title'
 
@@ -10,18 +10,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
+      name: 'index',
       component: Index
     },
     {
-      path: '/hello',
-      name: 'Hello',
-      component: Hello
-    },
-    {
-      path: '/index',
-      name: 'Index',
-      component: Index
+      path: '/newslist',
+      name: 'newslist',
+      component: NewsList
     },
     {
       path: '/title',

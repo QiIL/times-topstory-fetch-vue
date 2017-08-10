@@ -1,23 +1,30 @@
 <template>
-  <section class="callout secondary">
-			<h5 class="text-center">Filter by Category</h5>
-			<!-- <form>
-				<div class="row">
-					<div class="large-6 columns">
-						<select v-model="section">
-							<option v-for="section in sections" :value="section">{{ section }}</option>
-						</select>
-					</div>
-					<div class="medium-6 columns">
-						<a @click="getPosts(section)" class="button expanded">Retrieve</a>
-					</div>
-				</div>
-			</form> -->
-		</section>
+	<div>
+		<div>This is Title</div>
+		<button @click="getPost('home')">check res</button>
+	</div>
 </template>
-
 <script>
+import axios from 'axios'
+const newYorkApiKey = '4dfd6d88bc06460883571aef03350a5e'
+const baseUrl = 'https://api.nytimes.com/svc/topstories/v2/'
+// const SECTIONS = 'home, arts, automobiles, books, business, fashion, food, health, insider, magazine, movies, national, nyregion, obituaries, opinion, politics, realestate, science, sports, sundayreview, technology, theater, tmagazine, travel, upshot, world'
+function buildUrl (section) {
+  return baseUrl + section + '.json?api-key=' + newYorkApiKey
+}
+
 export default {
-  name: 'Title'
+  name: 'Title',
+  data: {
+    section: 'home'
+  },
+  methods: {
+    getPost (section) {
+      let url = buildUrl(section)
+      axios.get(url).then(function (res) {
+        console.log(res)
+      }).catch(error => { console.log(error) })
+    }
+  }
 }
 </script>
