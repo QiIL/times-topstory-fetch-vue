@@ -1,5 +1,7 @@
 <template>
-
+  <div class="hello">
+    <div @click="$router.push('/hello2')">Test</div>
+  </div>
 </template>
 
 <script>
