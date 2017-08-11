@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import NewsList from '@/components/NewsList'
 import Index from '@/views/index'
-import Title from '@/components/Title'
+import TitleList from '@/components/TitleList'
 
 Vue.use(Router)
 
@@ -21,7 +21,7 @@ export default new Router({
     {
       path: '/title',
       name: 'Title',
-      component: Title
+      component: TitleList
     }
   ]
 })
