@@ -1,21 +1,6 @@
 <template>
 	<div>
-		
-    <div :results="results"></div>
-	</div>
-</template>
-<script>
-import axios from 'axios'
-const newYorkApiKey = '4dfd6d88bc06460883571aef03350a5e'
-const baseUrl = 'https://api.nytimes.com/svc/topstories/v2/'
-const SECTIONS = 'home, arts, automobiles, books, business, fashion, food, health, insider, magazine, movies, national, nyregion, obituaries, opinion, politics, realestate, science, sports, sundayreview, technology, theater, tmagazine, travel, upshot, world'
-function buildUrl (section) {
-  return baseUrl + section + '.json?api-key=' + newYorkApiKey
-}
-
-export default {
-  template: `
-  <div>This is Title</div>
+		<div>This is Title</div>
       <form>
         <div class="row">
           
@@ -31,7 +16,19 @@ export default {
 
         </div>
       </form>
-  `,
+    <div :results="results"></div>
+	</div>
+</template>
+<script>
+import axios from 'axios'
+const newYorkApiKey = '4dfd6d88bc06460883571aef03350a5e'
+const baseUrl = 'https://api.nytimes.com/svc/topstories/v2/'
+const SECTIONS = 'home, arts, automobiles, books, business, fashion, food, health, insider, magazine, movies, national, nyregion, obituaries, opinion, politics, realestate, science, sports, sundayreview, technology, theater, tmagazine, travel, upshot, world'
+function buildUrl (section) {
+  return baseUrl + section + '.json?api-key=' + newYorkApiKey
+}
+
+export default {
   data () {
     return {
       results: [],
